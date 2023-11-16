@@ -1,6 +1,6 @@
 ---
-theme: Seriph
-background: Cheetah.jpg
+theme: seriph
+background: ./Cheetah.jpg
 class: text-center
 lineNumbers: false
 drawings:
@@ -36,20 +36,26 @@ hideInToc: false
 ---
 
 # Micro Benchmarks
+## What are these?
+Micro = Testing code pieces
 
-* What are these?
-* What are they used for?
-* Can BenchmarkDotNet be Used for API Performance or Load Testing?
+## What are they used for?
+Comparing scenarios (memory and performance)
+
+## What about APIs (Load and Stress Testing)?
+  * JMeter
+  * NBomber
+  * (BenchmarkDotNet)
+
 
 ---
 
-# Before You Dive Into Micro Benchmarks
+# Before We Start
 
-* Motivation
-* Identifiyig the hot path
-* Stop waches
-* Profilers
-* Micro Benchmark = Testing isolated scenariosr
+## 🔥 Identifiyig the Hot Path First
+## ⏱️ Stop Watches
+## 🕵️ Profilers
+## 🔬 Micro Benchmarks = Testing Isolated Scenarios
 
 ---
 
