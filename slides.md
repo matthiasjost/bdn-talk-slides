@@ -59,6 +59,8 @@ Comparing scenarios (memory and performance)
 ## 🔬 Micro Benchmarks = Testing Isolated Scenarios
 
 ---
+hideInToc: true
+---
 
 # Template and NuGet
 
@@ -100,6 +102,8 @@ PM> NuGet\Install-Package BenchmarkDotNet
 
 
 ---
+hideInToc: true
+---
 
 # Program.cs
 
@@ -120,6 +124,8 @@ public class Program
   }
 }
 ```
+---
+hideInToc: true
 ---
 
 # Benchmark.cs
@@ -167,8 +173,6 @@ dotnet run -c Release
 # Understanding the Results
 
 ```
-BenchmarkDotNet=v0.13.4, OS=Windows 11 (10.0.22635.2771)
-11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
  
 |                           Method |      Job |  Runtime |        Mean |       Error |      StdDev |  Ratio | RatioSD |
 |--------------------------------- |--------- |--------- |------------:|------------:|------------:|-------:|--------:|
@@ -181,6 +185,11 @@ BenchmarkDotNet=v0.13.4, OS=Windows 11 (10.0.22635.2771)
 |  SingleOrDefault_NotIndexed_Last | .NET 8.0 | .NET 8.0 | 52,017.6 us | 2,065.92 us | 5,927.50 us | 104.34 |   24.74 |
 | SingleOrDefault_NotIndexed_First | .NET 8.0 | .NET 8.0 | 54,610.0 us | 2,435.62 us | 7,066.18 us | 108.64 |   23.25 |
 ```
+* Mean: Think of the mean as the average.
+
+* StdDev (Standard Deviation): This measures how spread out your numbers are. The standard deviation is slight if all your measurements are close to the mean. If they’re all over the place, the standard deviation is significant.
+
+* Ratio: It shows how much larger or smaller the current measurements are compared to the baseline.
 
 ---
 
@@ -188,23 +197,63 @@ BenchmarkDotNet=v0.13.4, OS=Windows 11 (10.0.22635.2771)
 
 
 ```csharp
-[MemoryDiagnoser]
-[Params(1,4...)
-[SimpleJob(RuntimeMoniker.Net70)]
-[SimpleJob(RuntimeMoniker.Net80)]
-[ReturnValueValidator(failOnError: true)]
+[MemoryDiagnoser] // Use on class
 ```
 
+```csharp
+[Params(100,10000) // Use on field
+private int SequenceLength;
+```
+
+```csharp
+[SimpleJob(RuntimeMoniker.Net70)] // Use n class
+[SimpleJob(RuntimeMoniker.Net80)] // use on class
+```
+
+```csharp
+[ReturnValueValidator(failOnError: true)] // Use on class
+```
+
+```csharp
+[Benchmark(Baseline = true)] // Baseline benchmark method
+```
+
+```csharp
+[Benchmark] // Benchmark method
+```
+
+---
+hideInToc: true
 ---
 
 # Validating Results
 
+* In simple scenarios this attribute helps to ensure that your methods always return the same value
 ```csharp
 [ReturnValueValidator(failOnError: true)]
 ```
 
-- Unit tests!
+* Unit tests!
+* Make sure your benchmark methods "do the same thing/output"
+
+---
+
+
+# Links
+
+My BDN blog articles and GitHub examples:
+
+* https://www.matthias-jost.ch/ef-core-single-vs-firstordefault/
+* https://www.matthias-jost.ch/generating-fibonacci-sequence-csharp/
+* https://chartbenchmark.net/
+* https://github.com/dotnet/BenchmarkDotNet
+* https://benchmarkdotnet.org/articles/overview.html
 
 ---
 
 # Q&A
+
+* What are your questions?
+* Have you tried using BDN?
+
+--
