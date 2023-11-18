@@ -37,10 +37,11 @@ hideInToc: false
 ---
 
 # Micro Benchmarks
-## What are these?
+
+## What are Micro Benchmarks?
 Micro = Testing code pieces
 
-## What are they used for?
+## What are Micro Benchmarks used for?
 Comparing scenarios (memory and performance)
 
 ## What about APIs (Load and Stress Testing)?
@@ -241,13 +242,14 @@ hideInToc: true
 
 # Links
 
-My BDN blog articles and GitHub examples:
-
-* https://www.matthias-jost.ch/ef-core-single-vs-firstordefault/
-* https://www.matthias-jost.ch/generating-fibonacci-sequence-csharp/
-* https://chartbenchmark.net/
-* https://github.com/dotnet/BenchmarkDotNet
-* https://benchmarkdotnet.org/articles/overview.html
+* My BDN blog articles and GitHub examples:
+  * https://www.matthias-jost.ch/ef-core-single-vs-firstordefault/
+  * https://www.matthias-jost.ch/generating-fibonacci-sequence-csharp/
+* Nice charts for BDN results:
+  * https://chartbenchmark.net/
+* Official:
+  * https://github.com/dotnet/BenchmarkDotNet
+  * https://benchmarkdotnet.org/articles/overview.html
 
 ---
 
