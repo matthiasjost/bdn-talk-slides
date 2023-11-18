@@ -206,7 +206,7 @@ private int SequenceLength;
 ```
 
 ```csharp
-[SimpleJob(RuntimeMoniker.Net70)] // Use n class
+[SimpleJob(RuntimeMoniker.Net70)] // Use on class
 [SimpleJob(RuntimeMoniker.Net80)] // use on class
 ```
 
