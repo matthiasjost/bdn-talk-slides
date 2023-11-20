@@ -92,7 +92,7 @@ PM> NuGet\Install-Package BenchmarkDotNet
 ```csharp
 [MemoryDiagnoser]
 [Benchmark(Baseline = true)]
-[Params(1,4...)
+[Params(1,20,300)]
 ```
 
 ## 
