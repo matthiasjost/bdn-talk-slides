@@ -159,16 +159,18 @@ public class Benchmarks
 # Running Benchmarks
 
 * Do execute from the command line!
-
 ```
 dotnet run -c Release
 ```
 
+
+* The app builds within the host process:
 ![Local Image](/screenshot-project-build.png)
 
-* BDN executes your benchmark methods multiple times
-* Goal: Steady and reliable results
-
+* BDN executes your benchmark methods multiple times: 
+  > Goal: Steady and reliable results
+  
+* Close all other applications!
 ---
 
 # Understanding the Results
