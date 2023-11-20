@@ -169,7 +169,7 @@ dotnet run -c Release
 
 * BDN executes your benchmark methods multiple times: 
   > Goal: Steady and reliable results
-  
+
 * Close all other applications!
 ---
 
@@ -188,11 +188,11 @@ dotnet run -c Release
 |  SingleOrDefault_NotIndexed_Last | .NET 8.0 | .NET 8.0 | 52,017.6 us | 2,065.92 us | 5,927.50 us | 104.34 |   24.74 |
 | SingleOrDefault_NotIndexed_First | .NET 8.0 | .NET 8.0 | 54,610.0 us | 2,435.62 us | 7,066.18 us | 108.64 |   23.25 |
 ```
-* Mean: Think of the mean as the average.
+* Mean: => Average
 
 * StdDev (Standard Deviation): This measures how spread out your numbers are. The standard deviation is slight if all your measurements are close to the mean. If they’re all over the place, the standard deviation is significant.
 
-* Ratio: It shows how much larger or smaller the current measurements are compared to the baseline.
+* Ratio: Mean Ratio
 
 ---
 
