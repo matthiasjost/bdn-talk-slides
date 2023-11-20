@@ -39,7 +39,7 @@ hideInToc: false
 # Micro Benchmarks
 
 ## What are Micro Benchmarks?
-Micro = Testing code pieces
+Micro Benchmarks = Testing code pieces
 
 ## What are Micro Benchmarks used for?
 Comparing scenarios (memory and performance)
