@@ -1,6 +1,10 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# BenchmarkDotNet Talk Slides
 
-To start the slide show:
+This presentation was created with SliDev, a tool based on web technologies (Node/Vue...).
+
+It is beneficial to show code snippets with automatic syntax highlighting.
+
+## To start the slide show:
 
 - `npm install`
 - `npm run dev`
